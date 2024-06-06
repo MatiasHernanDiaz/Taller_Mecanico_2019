@@ -1,10 +1,12 @@
 class Tecnico(
     var tipoTecnico: TipoTecnico,
-    var autoAsignado: Auto
+    var autoAsignado: Auto,
+    var servicioAsignado: Servicio
 ) {
     fun aceptaAuto(auto: Auto): Boolean = tipoTecnico.aceptaAuto(auto)
-    fun aceptarAuto(auto: Auto) {
+    fun aceptarAuto(auto: Auto, servicio: Servicio) {
         autoAsignado = auto
+        servicioAsignado = servicio
     }
 }
 
